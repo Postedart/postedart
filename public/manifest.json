@@ -1,0 +1,31 @@
+{
+  "name": "Posted.art",
+  "short_name": "Posted",
+  "description": "Send a gift. Wrap it in art. A forever card, only on Posted.art.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/logos/postedart_logo_bg-black_square_64x64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "/logos/postedart_logo_bg-black_square_240x240.png",
+      "sizes": "240x240",
+      "type": "image/png"
+    },
+    {
+      "src": "/logos/postedart_logo_bg-black_square_512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/logos/postedart_logo_bg-black_square_1600x1600.png",
+      "sizes": "1600x1600",
+      "type": "image/png"
+    }
+  ]
+}
