@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: "Posted.art",
     images: [
       {
-        url: "/opengraph-postedart.jpg", // add this image to /public
+        url: "/logos/opengraph-postedart.jpg",
         width: 1200,
         height: 630,
         alt: "Posted.art – Send a gift, wrapped in art",
@@ -49,11 +49,11 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Posted.art",
     description: "Send a gift. Wrap it in art. A forever card, only on Posted.art.",
-    images: ["/opengraph-postedart.jpg"],
+    images: ["/logos/opengraph-postedart.jpg"],
     creator: "@postedart",
   },
   icons: {
-    icon: "/favicon.png", // put this file in /public
+    icon: "/logos/favicon.png",
   },
 };
 
@@ -65,7 +65,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="icon" href="/logos/favicon.png" sizes="64x64" type="image/png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body
