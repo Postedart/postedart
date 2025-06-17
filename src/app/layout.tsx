@@ -36,10 +36,10 @@ export const metadata: Metadata = {
     siteName: "Posted.art",
     images: [
       {
-        url: "/logos/opengraph-postedart.jpg",
+        url: "/opengraph-postedart.jpg",
         width: 1200,
         height: 630,
-        alt: "Posted.art – Send a gift, wrapped in art",
+        alt: "Send a gift. Wrap it in art. A forever card, only on Posted.art.",
       },
     ],
     locale: "en_US",
@@ -49,11 +49,11 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Posted.art",
     description: "Send a gift. Wrap it in art. A forever card, only on Posted.art.",
-    images: ["/logos/opengraph-postedart.jpg"],
+    images: ["/opengraph-postedart.jpg"],
     creator: "@postedart",
   },
   icons: {
-    icon: "/logos/favicon.png",
+    icon: "/favicon.png",
   },
 };
 
@@ -65,7 +65,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/logos/favicon.png" />
+        <link rel="icon" href="/favicon.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body
