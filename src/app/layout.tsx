@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Posted.art",
     description: "Send a gift. Wrap it in art. A forever card, only on Posted.art.",
-    images: ["/opengraph-postedart.jpg"],
+    images: ["/opengraph-postedart.png"],
     creator: "@postedart",
   },
   icons: {
