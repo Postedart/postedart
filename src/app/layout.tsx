@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: "Posted.art",
     images: [
       {
-        url: "/opengraph-postedart.jpg",
+        url: "/opengraph-postedart.png",
         width: 1200,
         height: 630,
         alt: "Send a gift. Wrap it in art. A forever card, only on Posted.art.",
