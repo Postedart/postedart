@@ -26,17 +26,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Posted.art",
-  description: "Send a gift. Wrap it in art. A forever card, only on Posted.art.",
+  title: "Send a gift. Wrap it in art.",
+  description: "A forever card, only on Posted.art.",
   metadataBase: new URL("https://posted.art"),
   openGraph: {
-    title: "Posted.art",
-    description: "Send a gift. Wrap it in art. A forever card, only on Posted.art.",
+    title: "Send a gift. Wrap it in art.",
+    description: "A forever card, only on Posted.art.",
     url: "https://posted.art",
     siteName: "Posted.art",
     images: [
       {
-        url: "/opengraph-postedart.png",
+        url: "https://posted.art/opengraph-postedart.png",
         width: 1200,
         height: 630,
         alt: "Send a gift. Wrap it in art. A forever card, only on Posted.art.",
@@ -47,10 +47,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Posted.art",
-    description: "Send a gift. Wrap it in art. A forever card, only on Posted.art.",
-    images: ["/opengraph-postedart.png"],
-    creator: "@postedart",
+    title: "Send a gift. Wrap it in art.",
+    description: "A forever card, only on Posted.art.",
+    images: ["https://posted.art/opengraph-postedart.png"],
+    creator: "@posteddotart",
   },
   icons: {
     icon: "/favicon.ico",
