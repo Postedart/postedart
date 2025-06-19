@@ -31,7 +31,21 @@ export default function HeroSection({ region }: Props) {
   const { title, text } = messages[theme];
   const imageSrc = `/stories/${theme}_${regionCode}.webp`;
 
-  // Rotate slides every 5s unless paused
+  // Handle long press
+  let holdTimer: NodeJS.Timeout;
+
+  const handlePointerDown = () => {
+    holdTimer = setTimeout(() => {
+      setIsPaused(true);
+    }, 500); // pause after 500ms hold
+  };
+
+  const handlePointerUp = () => {
+    clearTimeout(holdTimer);
+    setIsPaused(false);
+  };
+
+  // Auto-slide
   useEffect(() => {
     if (isPaused) return;
 
@@ -42,7 +56,7 @@ export default function HeroSection({ region }: Props) {
     return () => clearInterval(timer);
   }, [isPaused]);
 
-  // Spacebar toggles pause/resume
+  // Spacebar toggle pause
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.code === "Space") {
@@ -57,8 +71,8 @@ export default function HeroSection({ region }: Props) {
   return (
     <div
       className="relative w-full h-screen touch-none"
-      onPointerDown={() => setIsPaused(true)}
-      onPointerUp={() => setIsPaused(false)}
+      onPointerDown={handlePointerDown}
+      onPointerUp={handlePointerUp}
     >
       <Image
         src={imageSrc}
