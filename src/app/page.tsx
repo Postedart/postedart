@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { headers } from "next/headers";
-import { COUNTRY_TO_REGION, mapCountryToRegion } from "@/lib/country-to-region";
+import { mapCountryToRegion } from "@/lib/country-to-region";
 
 export default async function Page() {
   const headersList = await headers();
