@@ -31,32 +31,16 @@ export default function HeroSection({ region }: Props) {
   const { title, text } = messages[theme];
   const imageSrc = `/stories/${theme}_${regionCode}.webp`;
 
-  // Handle long press
-  let holdTimer: NodeJS.Timeout;
-
-  const handlePointerDown = () => {
-    holdTimer = setTimeout(() => {
-      setIsPaused(true);
-    }, 500); // pause after 500ms hold
-  };
-
-  const handlePointerUp = () => {
-    clearTimeout(holdTimer);
-    setIsPaused(false);
-  };
-
-  // Auto-slide
+  // Auto-rotate
   useEffect(() => {
     if (isPaused) return;
-
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % themes.length);
     }, 5000);
-
     return () => clearInterval(timer);
   }, [isPaused]);
 
-  // Spacebar toggle pause
+  // Spacebar toggles pause (desktop only)
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.code === "Space") {
@@ -69,11 +53,7 @@ export default function HeroSection({ region }: Props) {
   }, []);
 
   return (
-    <div
-      className="relative w-full h-screen touch-none"
-      onPointerDown={handlePointerDown}
-      onPointerUp={handlePointerUp}
-    >
+    <div className="relative w-full h-screen">
       <Image
         src={imageSrc}
         alt={`${theme} story`}
@@ -82,7 +62,7 @@ export default function HeroSection({ region }: Props) {
         priority
       />
 
-      {/* Pause icon */}
+      {/* Pause icon (only shows on desktop when spacebar is used) */}
       {isPaused && (
         <div
           className="absolute top-4 right-4 z-10 text-white text-2xl opacity-70"
