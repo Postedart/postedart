@@ -40,7 +40,7 @@ export default function HeroSection({ region }: Props) {
     return () => clearInterval(timer);
   }, [isPaused]);
 
-  // Spacebar toggles pause (desktop only)
+  // Pause via spacebar (desktop)
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.code === "Space") {
@@ -54,6 +54,19 @@ export default function HeroSection({ region }: Props) {
 
   return (
     <div className="relative w-full h-screen">
+
+      {/* Invisible overlay on left 25% to pause */}
+      <div
+        className="absolute top-0 left-0 h-full w-1/4 z-30 select-none"
+        onPointerDown={(e) => {
+          e.preventDefault();
+          setIsPaused(true);
+        }}
+        onPointerUp={() => setIsPaused(false)}
+        onPointerLeave={() => setIsPaused(false)}
+      />
+
+      {/* Background image */}
       <Image
         src={imageSrc}
         alt={`${theme} story`}
@@ -62,10 +75,10 @@ export default function HeroSection({ region }: Props) {
         priority
       />
 
-      {/* Pause icon (only shows on desktop when spacebar is used) */}
+      {/* Pause icon */}
       {isPaused && (
         <div
-          className="absolute top-4 right-4 z-10 text-white text-2xl opacity-70"
+          className="absolute top-4 right-4 z-40 text-white text-2xl opacity-70"
           aria-label="Slideshow paused"
         >
           ❚❚

@@ -2,7 +2,7 @@
 
 export default function Header() {
   return (
-      <header className="w-full flex justify-between items-center pl-2 pr-5 py-4">
+      <header className="w-full flex justify-between items-center pl-1 pr-5 py-4">
         <div className="flex items-center">
           <img
             src="/logos/postedart_logo_bg-black_wide.svg"
